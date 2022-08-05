@@ -6,7 +6,7 @@ Console.WriteLine("Введите второе число");
 
 int numberB=int.Parse (Console.ReadLine());
 
-if (numberA ==numberB*numberB) 
+if (numberA ==numberB*numberB ||) 
 {
   Console.WriteLine("Число А является степенью числа Б");
 }
