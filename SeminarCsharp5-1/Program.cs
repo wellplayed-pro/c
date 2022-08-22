@@ -1,14 +1,26 @@
 ﻿// Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
 
-int[] array = new int[8];
-int counter = 0;
-Random rand = new Random();
-for (int y = 0; y < rand.Next(1, 8); y++)
+
+int[] FillArray(int[] array)
 {
-  array[y] = rand.Next(1, 1000);
-  Console.Write(array[y] + " ");
-  if (array[y] % 2==0) counter++;
- 
+   for (int i = 0; i < array.Length; i++)
+  {
+    array[i]=  new Random().Next(0,100) ;
+  }
+  Console.WriteLine(string.Join(", ", array));
+  return array;
 }
+
+int Chet(int[] array)
+{
+  int counter = 0;
+  for (int i = 0; i < array.Length; i++)
+{
+ if (array[i] % 2==0) counter++;
+
+  }
+return counter;
+}
+int [] array = new int[8] ;
 Console.WriteLine(" ");
-Console.WriteLine("Количество четных элементов равно " + counter);
+Console.WriteLine("Количество четных элементов равно " + Chet(FillArray(array)));

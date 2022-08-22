@@ -1,14 +1,24 @@
 ﻿// Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
-
-int[] array = new int[8];
-int sum = 0;
-Random rand = new Random();
-for (int y = 0; y < rand.Next(1, 8); y++)
+int[] FillArray(int[] array)
 {
-  array[y] = rand.Next(-100, 100);
-  Console.Write(array[y] + " ");
-  if (y % 2==0) sum=sum+array[y];
+   for (int i = 0; i < array.Length; i++)
+  {
+    array[i]=  new Random().Next(0,100) ;
+  }
+  Console.WriteLine(string.Join(", ", array));
+  return array;
+}
+
+int Summ(int[] array)
+{
+  int sum = 0;
+  for (int i = 0; i < array.Length; i++)
+{
+  if (i % 2==0) sum=sum+array[i];
  
 }
+return sum;
+}
+int [] array = new int[8] ;
 Console.WriteLine(" ");
-Console.WriteLine("Сумма нечетных элементов равна " + sum);
+Console.WriteLine("Сумма нечетных элементов равна " + Summ(FillArray(array)));
