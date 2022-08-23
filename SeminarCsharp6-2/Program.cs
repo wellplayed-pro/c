@@ -13,9 +13,9 @@ void Ouch(double k1, double b1, double k2, double b2)
   }
 }
 double k1,k2,b1,b2;
-Console.WriteLine("Введите по порядку k1,b1,k2,b2");
-k1=double.Parse(Console.ReadLine());
+Console.WriteLine("Введите по порядку b1,k1,b2,k2");
 b1=double.Parse(Console.ReadLine());
-k2=double.Parse(Console.ReadLine());
+k1=double.Parse(Console.ReadLine());
 b2=double.Parse(Console.ReadLine());
+k2=double.Parse(Console.ReadLine());
 Ouch(k1, b1, k2, b2);
